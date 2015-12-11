@@ -40,7 +40,7 @@ html
 
 
 
-        
+
     style.
       /* Colors */
       body {
@@ -113,7 +113,7 @@ html
       }
       /* Custom CSS */
       {CustomCSS}
-  body.(data-urlencoded-name='{URLEncodedName}', class='{select:Layout}{block:IndexPage} index-page{/block:IndexPage}{block:PermalinkPage} permalink{/block:PermalinkPage}{block:SearchPage} search-page{block:NoSearchResults} no-results{/block:NoSearchResults}{/block:SearchPage}{block:HideHeaderImage} no-header-image{/block:HideHeaderImage}{block:NoStretchHeaderImage} contain-header-image{/block:NoStretchHeaderImage}{block:IfRelatedPosts} display-related-posts{/block:IfRelatedPosts}')
+  body(data-urlencoded-name='{URLEncodedName}', class='{select:Layout}{block:IndexPage} index-page{/block:IndexPage}{block:PermalinkPage} permalink{/block:PermalinkPage}{block:SearchPage} search-page{block:NoSearchResults} no-results{/block:NoSearchResults}{/block:SearchPage}{block:HideHeaderImage} no-header-image{/block:HideHeaderImage}{block:NoStretchHeaderImage} contain-header-image{/block:NoStretchHeaderImage}{block:IfRelatedPosts} display-related-posts{/block:IfRelatedPosts}')
     .app-nag
       .app-nag-header.clearfix
         .app-nag-icon
@@ -177,10 +177,10 @@ html
             .loader-bg
           |                     {/block:ShowHeaderImage}
           .blog-title-wrapper.content
-            figure.(class='avatar-wrapper{block:IndexPage} animate{/block:IndexPage}')
+            figure(class='avatar-wrapper{block:IndexPage} animate{/block:IndexPage}')
               a.user-avatar(href='/', style='background-image: url({PortraitURL-128})')
                 img.print-only.invisible(src='{PortraitURL-128}', alt='')
-            .(class='title-group{block:IndexPage} animate{/block:IndexPage}')
+            div(class='title-group{block:IndexPage} animate{/block:IndexPage}')
               | {block:ShowTitle}
               h1.blog-title
                 a(href='/') {Title}
@@ -261,14 +261,14 @@ html
                 |                                         {/block:Photoset}
                 |                                         {block:Quote}
                 .post-content
-                  blockquote.(class='{Length}')
+                  blockquote(class='{Length}')
                     | {Quote}
                   |                                             {block:Source}
                   .source {Source}
                   |                                             {/block:Source}
                 |                                         {/block:Quote}
                 |                                         {block:Link}
-                .(class='post-content{block:Description} with-caption{/block:Description}{block:Thumbnail} with-thumbnail{/block:Thumbnail}')
+                div(class='post-content{block:Description} with-caption{/block:Description}{block:Thumbnail} with-thumbnail{/block:Thumbnail}')
                   .link-wrapper
                     a.link({target}='', href='{URL}')
                       | {block:Thumbnail}
@@ -300,7 +300,7 @@ html
                   | {/block:Title}
                   ul.conversation
                     | {block:Lines}
-                    li.(class='chat-{Alt}')
+                    li(class='chat-{Alt}')
                       | {block:Label}
                       span.label {Label}
                       | {/block:Label} {Line}
@@ -489,14 +489,14 @@ html
                 |                                             {/block:Photoset}
                 |                                             {block:Quote}
                 .post-content
-                  blockquote.(class='{Length}')
+                  blockquote(class='{Length}')
                     | {Quote}
                   |                                                 {block:Source}
                   .source {Source}
                   |                                                 {/block:Source}
                 |                                             {/block:Quote}
                 |                                             {block:Link}
-                .(class='post-content{block:Description} with-caption{/block:Description}{block:Thumbnail} with-thumbnail{/block:Thumbnail}')
+                div(class='post-content{block:Description} with-caption{/block:Description}{block:Thumbnail} with-thumbnail{/block:Thumbnail}')
                   .link-wrapper
                     a.link({target}='', href='{URL}')
                       | {block:Thumbnail}
@@ -528,7 +528,7 @@ html
                   | {/block:Title}
                   ul.conversation
                     | {block:Lines}
-                    li.(class='chat-{Alt}')
+                    li(class='chat-{Alt}')
                       | {block:Label}
                       span.label {Label}
                       | {/block:Label} {Line}
