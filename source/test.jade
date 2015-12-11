@@ -11,10 +11,10 @@ html
     meta(charset='utf-8')
     title
       | {Title}{block:SearchPage} ({lang:Search results for SearchQuery}){/block:SearchPage}{block:PermalinkPage}{block:PostSummary} — {PostSummary}{/block:PostSummary}{/block:PermalinkPage}
-    |         {block:Description}
+    | {block:Description}
     meta(name='description', content='{MetaDescription}')
-    |         {/block:Description}
-    |         {block:Hidden}
+    | {/block:Description}
+    | {block:Hidden}
     meta(name='if:Sliding header', content='1')
     meta(name='if:Show navigation', content='1')
     meta(name='if:Endless scrolling', content='1')
@@ -25,15 +25,15 @@ html
     meta(name='if:Related Posts', content='1')
     meta(name='text:Disqus shortname', content='')
     meta(name='text:Google analytics ID', content='')
-    |         {/block:Hidden}
+    | {/block:Hidden}
     meta(name='viewport', content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no')
     link(rel='shortcut icon', href='{Favicon}')
     link(rel='apple-touch-icon-precomposed', href='{PortraitURL-128}')
     link(rel='alternate', type='application/rss+xml', href='{RSS}')
     link(rel='stylesheet', href='http://static.tumblr.com/05o0pke/yeTnx9gi9/main-min.css')
-    |         {block:IfSyntaxHighlighting}
+    | {block:IfSyntaxHighlighting}
     link(rel='stylesheet', href='http://static.tumblr.com/ehm1tdz/2VWnye81h/tumblr-highlightjs.css')
-    |         {/block:IfSyntaxHighlighting}
+    | {/block:IfSyntaxHighlighting}
     // HTML5 Shiv
     //if lt IE 9
       script(src='http://static.tumblr.com/hriofhd/Qj0m8pn7q/html5shiv.js')
@@ -177,9 +177,9 @@ html
             a.header-image(href='/', class='{block:IfSlidingHeader}parallax{/block:IfSlidingHeader} {block:StretchHeaderImage}cover{/block:StretchHeaderImage} {block:NoStretchHeaderImage}contain{/block:NoStretchHeaderImage}', data-bg-image='{HeaderImage}')
               | {block:NoStretchHeaderImage}
               img(src='{HeaderImage}', alt='')
-              |                             {/block:NoStretchHeaderImage}
+              | {/block:NoStretchHeaderImage}
             .loader-bg
-          |                     {/block:ShowHeaderImage}
+          | {/block:ShowHeaderImage}
           .blog-title-wrapper.content
             figure(class='avatar-wrapper{block:IndexPage} animate{/block:IndexPage}')
               a.user-avatar(href='/', style='background-image: url({PortraitURL-128})')
@@ -188,12 +188,12 @@ html
               | {block:ShowTitle}
               h1.blog-title
                 a(href='/') {Title}
-              |                             {/block:ShowTitle}
-              |                             {block:ShowDescription}
+              | {/block:ShowTitle}
+              | {block:ShowDescription}
               span.description
                 | {Description}
-              |                             {/block:ShowDescription}
-              |                             {block:IfShowNavigation}
+              | {/block:ShowDescription}
+              | {block:IfShowNavigation}
               .content(class='{block:HideTitle}{block:HideDescription}no-title-desc {/block:HideDescription}{/block:HideTitle}nav-wrapper')
                 nav.nav-menu
                   ul.inline-nav
@@ -201,25 +201,25 @@ html
                     | {block:Pages}
                     li.nav-item.nav-item--page
                       a.label(href='{URL}') {Label}
-                    |                                                 {/block:Pages}
-                    |                                             {/block:HasPages}
-                    |                                             {block:AskEnabled}
+                    | {/block:Pages}
+                    | {/block:HasPages}
+                    | {block:AskEnabled}
                     li.nav-item.nav-item--ask
                       a.label(href='/ask') {AskLabel}
-                    |                                             {/block:AskEnabled}
-                    |                                             {block:SubmissionsEnabled}
+                    | {/block:AskEnabled}
+                    | {block:SubmissionsEnabled}
                     li.nav-item.nav-item--submit
                       a.label(href='/submit') {SubmitLabel}
-                    |                                             {/block:SubmissionsEnabled}
+                    | {/block:SubmissionsEnabled}
                     li.nav-item.nav-item--archive
                       a.label(href='/archive') {lang:Archive}
-              |                             {/block:IfShowNavigation}
-      |             {block:SearchPage}
-      |                 {block:NoSearchResults}
+              | {/block:IfShowNavigation}
+      | {block:SearchPage}
+      | {block:NoSearchResults}
       .search-no-results.content
         | {lang:Sorry no search results found}.
-      |                 {/block:NoSearchResults}
-      |             {/block:SearchPage}
+      | {/block:NoSearchResults}
+      | {/block:SearchPage}
       section#posts.content.clearfix(class='{block:HideTitle}{block:HideDescription}no-title-desc {/block:HideDescription}{/block:HideTitle}{block:HideHeaderImage}no-image {/block:HideHeaderImage} {block:ShowAvatar}avatar-style-{AvatarShape}{/block:ShowAvatar} {block:HideAvatar}avatar-hidden{/block:HideAvatar} {block:IfShowNavigation}show-nav{/block:IfShowNavigation}')
         div(data-page-id='{CurrentPage}')
           | {block:Posts inlineMediaWidth="700" inlineNestedMediaWidth="700"}
@@ -230,73 +230,80 @@ html
                 a.reblog-link(href='{ReblogParentURL}')
                   i.icon-reblog
                   | {ReblogParentName}
-              |                                     {/block:RebloggedFrom}
+              | {/block:RebloggedFrom}
               section.post
+
                 | {block:Text}
                 .post-content
                   | {block:Title}
                   h2.title
                     a(href='{Permalink}') {Title}
                   | {/block:Title}
-                  |                                             {block:Body}
+                  | {block:Body}
                   .body-text
                     | {Body}
-                  |                                             {/block:Body}
-                |                                         {/block:Text}
-                |                                         {block:Photo}
+                  | {/block:Body}
+                | {/block:Text}
+
+                | {block:Photo}
                 figure.post-content(class='{block:HighRes}high-res{/block:HighRes}{block:Caption} with-caption{/block:Caption}', data-photo-width='{PhotoWidth-HighRes}')
                   .photo-wrapper
                     .photo-wrapper-inner
                       | {LinkOpenTag}
                       img(src='{PhotoURL-HighRes}', alt='{PhotoAlt}', width='{PhotoWidth-HighRes}', height='{PhotoHeight-HighRes}')
                       | {LinkCloseTag}
-                  |                                             {block:Caption}
+                  | {block:Caption}
                   figcaption.caption
                     | {Caption}
-                  |                                             {/block:Caption}
-                |                                         {/block:Photo}
-                |                                         {block:Photoset}
+                  | {/block:Caption}
+                | {/block:Photo}
+
+                | {block:Photoset}
                 figure.post-content.photoset(class='{block:Caption}with-caption{/block:Caption}')
                   | {Photoset}
                   | {block:Caption}
                   figcaption.caption
                     | {Caption}
-                  |                                             {/block:Caption}
-                |                                         {/block:Photoset}
-                |                                         {block:Quote}
+                  | {/block:Caption}
+                | {/block:Photoset}
+
+                | {block:Quote}
                 .post-content
                   blockquote(class='{Length}')
                     | {Quote}
-                  |                                             {block:Source}
+                  | {block:Source}
                   .source {Source}
-                  |                                             {/block:Source}
-                |                                         {/block:Quote}
-                |                                         {block:Link}
+                  | {/block:Source}
+                | {/block:Quote}
+
+                | {block:Link}
                 div(class='post-content{block:Description} with-caption{/block:Description}{block:Thumbnail} with-thumbnail{/block:Thumbnail}')
                   .link-wrapper
                     a.link({target}='', href='{URL}')
                       | {block:Thumbnail}
                       .link-thumbnail
                         img(src='{Thumbnail-HighRes}', alt='')
-                      |                                                     {/block:Thumbnail}
+                      | {/block:Thumbnail}
                       .link-text-wrapper.clearfix
                         .link-text
                           | {block:Host}
                           .link-host {Host}
-                          |                                                             {/block:Host}
+                          | {/block:Host}
                           h2.link-title {Name}
-                          |                                                             {block:Excerpt}
+                          | {block:Excerpt}
                           .link-excerpt {Excerpt}
-                          |                                                             {/block:Excerpt}
-                          |                                                             {block:Author}
+                          | {/block:Excerpt}
+                          | {block:Author}
                           .link-author {Author}
-                          |                                                             {/block:Author}
-                  |                                             {block:Description}
+                          | {/block:Author}
+
+                  | {block:Description}
                   .caption
                     | {Description}
-                  |                                             {/block:Description}
-                |                                         {/block:Link}
-                |                                         {block:Chat}
+                  | {/block:Description}
+                | {/block:Link}
+
+                | {block:Chat}
                 .post-content
                   | {block:Title}
                   h2.title
@@ -308,29 +315,32 @@ html
                       | {block:Label}
                       span.label {Label}
                       | {/block:Label} {Line}
-                    |                                             {/block:Lines}
-                |                                         {/block:Chat}
-                |                                         {block:Audio}
+                    | {/block:Lines}
+                | {/block:Chat}
+
+                | {block:Audio}
                 .post-content(class='{block:Caption}with-caption{/block:Caption}')
                   .audio_container
                     | {block:AudioEmbed}
                     | {AudioEmbed color="white"}
                     | {/block:AudioEmbed}
-                  |                                             {block:Caption}
+                  | {block:Caption}
                   .caption
                     | {Caption}
-                  |                                             {/block:Caption}
-                |                                         {/block:Audio}
-                |                                         {block:Video}
+                  | {/block:Caption}
+                | {/block:Audio}
+
+                | {block:Video}
                 figure.post-content(class='{block:Caption}with-caption{/block:Caption}')
                   .video-wrapper
                     | {Video-700}
-                  |                                             {block:Caption}
+                  | {block:Caption}
                   figcaption.caption
                     | {Caption}
-                  |                                             {/block:Caption}
-                |                                         {/block:Video}
-                |                                         {block:Answer}
+                  | {/block:Caption}
+                | {/block:Video}
+
+                | {block:Answer}
                 .post-content
                   .note-item.note-item-asker
                     .text
@@ -341,7 +351,7 @@ html
                         | {Question}
                     .avatar
                       img.asker-avatar(src='{AskerPortraitURL-96}', alt='')
-                  |                                             {block:Answerer}
+                  | {block:Answerer}
                   .note-item.note-item-answerer
                     .text
                       p.answerer
@@ -351,25 +361,27 @@ html
                         | {Answer}
                     .avatar
                       img.answerer-avatar(src='{AnswererPortraitURL-96}', alt='')
-                  |                                             {/block:Answerer}
+                  | {/block:Answerer}
                   .replies
                     | {Replies}
-                |                                         {/block:Answer}
+                | {/block:Answer}
+
                 section.inline-meta(class='post-extra{block:RebloggedFrom} has-reblog{/block:RebloggedFrom}{block:ContentSource} has-source{/block:ContentSource}{block:HasTags} has-tags{/block:HasTags}')
                   | {block:RebloggedFrom}
                   a.meta-item.reblog-link(href='{ReblogParentURL}')
                     i.icon-reblog
                     | {ReblogParentName}
-                  |                                             {/block:RebloggedFrom}
-                  |                                             {block:ContentSource}
+                  | {/block:RebloggedFrom}
+
+                  | {block:ContentSource}
                   a.meta-item.source-link(href='{SourceURL}') {lang:Source}: {SourceTitle}
-                  |                                             {/block:ContentSource}
-                  |                                             {block:HasTags}
-                  |                                                 {block:Tags}
+                  | {/block:ContentSource}
+                  | {block:HasTags}
+                  | {block:Tags}
                   a.meta-item.tag-link(href='{TagURL}') {Tag}
-                  |                                                 {/block:Tags}
-                  |                                             {/block:HasTags}
-              |                                     {block:Date}
+                  | {/block:Tags}
+                  | {/block:HasTags}
+              | {block:Date}
               section.panel
                 footer.post-footer
                   section.inline-meta.date-notes
@@ -377,8 +389,8 @@ html
                       | {block:NoteCount}
                       span.notes-pop-container
                         a.meta-item.post-notes(href='{Permalink}#notes') {NoteCountWithLabel}
-                        |                                                             {block:PermalinkPage}
-                        |                                                                 {block:PostNotes}
+                        | {block:PermalinkPage}
+                        | {block:PostNotes}
                         section#notes.notes-wrapper.clearfix
                           .notes-wrapper-header
                             span.notes-wrapper-header-close
@@ -386,10 +398,10 @@ html
                                 g(stroke='none', stroke-width='1', fill='none', fill-rule='evenodd')
                                   path(d='M12.510351,14.6860639 L0,27.1964147 L2.175713,29.3721278 L14.686064,16.8617771 L27.196415,29.3721278 L29.372128,27.1964147 L16.861777,14.6860639 L29.372128,2.1757132 L27.196415,0 L14.686064,12.5103507 L2.175713,0 L0,2.1757132 L12.510351,14.6860639 L12.510351,14.6860639 Z', fill='#D3D3D3')
                             |                                                                             {NoteCountWithLabel}
-                          |                                                                         {PostNotes-64}
-                        |                                                                 {/block:PostNotes}
-                        |                                                             {/block:PermalinkPage}
-                      |                                                     {/block:NoteCount}
+                          | {PostNotes-64}
+                        | {/block:PostNotes}
+                        | {/block:PermalinkPage}
+                      | {/block:NoteCount}
                       a.meta-item.post-date(href='{Permalink}', title='{TimeAgo}') {ShortMonth} {DayOfMonth}{DayOfMonthSuffix}, {Year}
                   section.post-controls
                     .controls-wrapper
@@ -404,14 +416,14 @@ html
                                 a.share-item.facebook(href='http://facebook.com/sharer.php?u={URLEncodedPermalink}&t={URLEncodedTitle}', target='_blank') {lang:Facebook}
                               li
                                 a.share-item.twitter(href='https://twitter.com/intent/tweet?text={URLEncodedTweetSummary}', target='_blank') {lang:Tweet}
-                              |                                                                     {block:Photo}
+                              | {block:Photo}
                               li
                                 a.share-item.pinterest(href='//www.pinterest.com/pin/create/button/?url={URLEncodedPermalink}&media={PhotoURL-500}', target='_blank') {lang:Pinterest}
-                              |                                                                     {/block:Photo}
-                              |                                                                     {block:Video}{block:VideoThumbnail}
+                              | {/block:Photo}
+                              | {block:Video}{block:VideoThumbnail}
                               li
                                 a.share-item.pinterest(href='//www.pinterest.com/pin/create/button/?url={URLEncodedPermalink}&media={VideoThumbnailURL}&is_video=true', target='_blank') {lang:Pinterest}
-                              |                                                                     {/block:VideoThumbnail}{/block:Video}
+                              | {/block:VideoThumbnail}{/block:Video}
                               li
                                 a.share-item.reddit(href='https://reddit.com/submit?url={URLEncodedPermalink}', target='_blank') {lang:Reddit}
                               li
@@ -424,10 +436,10 @@ html
                                   i.icon-arrow_carrot_right
                       .control.reblog-control {ReblogButton size="21" color="black"}
                       .control.like-control {LikeButton size="20" color="black"}
-              |                                     {/block:Date}
-              |                                     {block:PermalinkPage}
-              |                                         {block:Date}
-              |                                             {block:IfDisqusShortname}
+              | {/block:Date}
+              | {block:PermalinkPage}
+              | {block:Date}
+              | {block:IfDisqusShortname}
               section.comments
                 #disqus_thread
                 script(type='text/javascript').
@@ -442,12 +454,12 @@ html
                 a.dsq-brlink(href='http://disqus.com')
                   | blog comments powered by 
                   span.logo-disqus Disqus
-              |                                             {/block:IfDisqusShortname}
-              |                                         {/block:Date}
-              |                                     {/block:PermalinkPage}
-          |                     {/block:Posts}
-      |             {block:IfRelatedPosts}
-      |                 {block:RelatedPosts}
+              | {/block:IfDisqusShortname}
+              | {/block:Date}
+              | {/block:PermalinkPage}
+          | {/block:Posts}
+      | {block:IfRelatedPosts}
+      | {block:RelatedPosts}
       section.related-posts-wrapper
         h2 {lang:More you might like}
         .related-posts.grid
@@ -459,7 +471,7 @@ html
                 a.reblog-link(href='{ReblogParentURL}')
                   i.icon-reblog
                   | {ReblogParentName}
-              |                                         {/block:RebloggedFrom}
+              | {/block:RebloggedFrom}
               section.post
                 | {block:Text}
                 .post-content
@@ -467,64 +479,64 @@ html
                   h2.title
                     a(href='{Permalink}') {Title}
                   | {/block:Title}
-                  |                                                 {block:Body}
+                  | {block:Body}
                   .body-text
                     | {Body}
-                  |                                                 {/block:Body}
-                |                                             {/block:Text}
-                |                                             {block:Photo}
+                  | {/block:Body}
+                | {/block:Text}
+                | {block:Photo}
                 figure.post-content(class='{block:HighRes}high-res{/block:HighRes}{block:Caption} with-caption{/block:Caption}', data-photo-width='{PhotoWidth-HighRes}')
                   .photo-wrapper
                     .photo-wrapper-inner
                       a(href='{Permalink}')
                         img(src='{PhotoURL-HighRes}', alt='{PhotoAlt}', width='{PhotoWidth-HighRes}', height='{PhotoHeight-HighRes}')
-                  |                                                 {block:Caption}
+                  | {block:Caption}
                   figcaption.caption
                     | {Caption}
-                  |                                                 {/block:Caption}
-                |                                             {/block:Photo}
-                |                                             {block:Photoset}
+                  | {/block:Caption}
+                | {/block:Photo}
+                | {block:Photoset}
                 figure.post-content.photoset(class='{block:Caption}with-caption{/block:Caption}')
                   | {Photoset}
                   | {block:Caption}
                   figcaption.caption
                     | {Caption}
-                  |                                                 {/block:Caption}
-                |                                             {/block:Photoset}
-                |                                             {block:Quote}
+                  | {/block:Caption}
+                | {/block:Photoset}
+                | {block:Quote}
                 .post-content
                   blockquote(class='{Length}')
                     | {Quote}
-                  |                                                 {block:Source}
+                  | {block:Source}
                   .source {Source}
-                  |                                                 {/block:Source}
-                |                                             {/block:Quote}
-                |                                             {block:Link}
+                  | {/block:Source}
+                | {/block:Quote}
+                | {block:Link}
                 div(class='post-content{block:Description} with-caption{/block:Description}{block:Thumbnail} with-thumbnail{/block:Thumbnail}')
                   .link-wrapper
                     a.link({target}='', href='{URL}')
                       | {block:Thumbnail}
                       .link-thumbnail
                         img(src='{Thumbnail-HighRes}', alt='')
-                      |                                                         {/block:Thumbnail}
+                      | {/block:Thumbnail}
                       .link-text-wrapper.clearfix
                         .link-text
                           | {block:Host}
                           .link-host {Host}
-                          |                                                                 {/block:Host}
+                          | {/block:Host}
                           h2.link-title {Name}
-                          |                                                                 {block:Excerpt}
+                          | {block:Excerpt}
                           .link-excerpt {Excerpt}
-                          |                                                                 {/block:Excerpt}
-                          |                                                                 {block:Author}
+                          | {/block:Excerpt}
+                          | {block:Author}
                           .link-author {Author}
-                          |                                                                 {/block:Author}
-                  |                                                 {block:Description}
+                          | {/block:Author}
+                  | {block:Description}
                   .caption
                     | {Description}
-                  |                                                 {/block:Description}
-                |                                             {/block:Link}
-                |                                             {block:Chat}
+                  | {/block:Description}
+                | {/block:Link}
+                | {block:Chat}
                 .post-content
                   | {block:Title}
                   h2.title
@@ -536,29 +548,29 @@ html
                       | {block:Label}
                       span.label {Label}
                       | {/block:Label} {Line}
-                    |                                                 {/block:Lines}
-                |                                             {/block:Chat}
-                |                                             {block:Audio}
+                    | {/block:Lines}
+                | {/block:Chat}
+                | {block:Audio}
                 .post-content(class='{block:Caption}with-caption{/block:Caption}')
                   .audio_container
                     | {block:AudioEmbed}
                     | {AudioEmbed color="white"}
                     | {/block:AudioEmbed}
-                  |                                                 {block:Caption}
+                  | {block:Caption}
                   .caption
                     | {Caption}
-                  |                                                 {/block:Caption}
-                |                                             {/block:Audio}
-                |                                             {block:Video}
+                  | {/block:Caption}
+                | {/block:Audio}
+                | {block:Video}
                 figure.post-content(class='{block:Caption}with-caption{/block:Caption}')
                   .video-wrapper
                     | {Video-700}
-                  |                                                 {block:Caption}
+                  | {block:Caption}
                   figcaption.caption
                     | {Caption}
-                  |                                                 {/block:Caption}
-                |                                             {/block:Video}
-                |                                             {block:Answer}
+                  | {/block:Caption}
+                | {/block:Video}
+                | {block:Answer}
                 .post-content
                   .note-item.note-item-asker
                     .text
@@ -569,7 +581,7 @@ html
                         | {Question}
                     .avatar
                       img.asker-avatar(src='{AskerPortraitURL-96}', alt='')
-                  |                                                 {block:Answerer}
+                  | {block:Answerer}
                   .note-item.note-item-answerer
                     .text
                       p.answerer
@@ -579,32 +591,32 @@ html
                         | {Answer}
                     .avatar
                       img.answerer-avatar(src='{AnswererPortraitURL-96}', alt='')
-                  |                                                 {/block:Answerer}
+                  | {/block:Answerer}
                   .replies
                     | {Replies}
-                |                                             {/block:Answer}
+                | {/block:Answer}
                 section.inline-meta(class='post-extra{block:RebloggedFrom} has-reblog{/block:RebloggedFrom}{block:ContentSource} has-source{/block:ContentSource}{block:HasTags} has-tags{/block:HasTags}')
                   | {block:RebloggedFrom}
                   a.meta-item.reblog-link(href='{ReblogParentURL}')
                     i.icon-reblog
                     | {ReblogParentName}
-                  |                                                 {/block:RebloggedFrom}
-                  |                                                 {block:ContentSource}
+                  | {/block:RebloggedFrom}
+                  | {block:ContentSource}
                   a.meta-item.source-link(href='{SourceURL}') {lang:Source}: {SourceTitle}
-                  |                                                 {/block:ContentSource}
-                  |                                                 {block:HasTags}
-                  |                                                     {block:Tags}
+                  | {/block:ContentSource}
+                  | {block:HasTags}
+                  | {block:Tags}
                   a.meta-item.tag-link(href='{TagURL}') {Tag}
-                  |                                                     {/block:Tags}
-                  |                                                 {/block:HasTags}
-              |                                         {block:Date}
+                  | {/block:Tags}
+                  | {/block:HasTags}
+              | {block:Date}
               section.panel
                 footer.post-footer
                   section.inline-meta.date-notes
                     .date-note-wrapper
                       | {block:NoteCount}
                       a.meta-item.post-notes(href='{Permalink}#notes') {NoteCountWithLabel}
-                      |                                                         {/block:NoteCount}
+                      | {/block:NoteCount}
                   section.post-controls
                     .controls-wrapper
                       .control.share-control
@@ -618,14 +630,14 @@ html
                                 a.share-item.facebook(href='http://facebook.com/sharer.php?u={URLEncodedPermalink}&t={URLEncodedTitle}', target='_blank') {lang:Facebook}
                               li
                                 a.share-item.twitter(href='https://twitter.com/intent/tweet?text={URLEncodedTweetSummary}', target='_blank') {lang:Tweet}
-                              |                                                                         {block:Photo}
+                              | {block:Photo}
                               li
                                 a.share-item.pinterest(href='//www.pinterest.com/pin/create/button/?url={URLEncodedPermalink}&media={PhotoURL-500}', target='_blank') {lang:Pinterest}
-                              |                                                                         {/block:Photo}
+                              | {/block:Photo}
                               |                                                                         {block:Video}{block:VideoThumbnail}
                               li
                                 a.share-item.pinterest(href='//www.pinterest.com/pin/create/button/?url={URLEncodedPermalink}&media={VideoThumbnailURL}&is_video=true', target='_blank') {lang:Pinterest}
-                              |                                                                         {/block:VideoThumbnail}{/block:Video}
+                              | {/block:VideoThumbnail}{/block:Video}
                               li
                                 a.share-item.reddit(href='https://reddit.com/submit?url={URLEncodedPermalink}', target='_blank') {lang:Reddit}
                               li
@@ -638,14 +650,14 @@ html
                                   i.icon-arrow_carrot_right
                       .control.reblog-control {ReblogButton size="21" color="black"}
                       .control.like-control {LikeButton size="20" color="black"}
-              |                                         {/block:Date}
-          |                         {/block:Posts}
+              | {/block:Date}
+          | {/block:Posts}
         .related-posts-cta.content
           // @todo: translate these strings
           a.related-post-cta.button.bordered.open-in-app {lang:See this in the app}
           a.related-post-cta.see-more.button.bordered(href='/') {lang:Show more}
-      |                 {/block:RelatedPosts}
-      |             {/block:IfRelatedPosts}
+      | {/block:RelatedPosts}
+      | {/block:IfRelatedPosts}
       footer#footer.content.clearfix
         | {block:IndexPage}
         | {block:Pagination}
@@ -654,18 +666,27 @@ html
           a.previous(href='{PreviousPage}', data-current-page='{CurrentPage}', data-total-pages='{TotalPages}')
             | {lang:Previous}
             span.bg
-          |                         {/block:PreviousPage}
-          |                         {block:NextPage}
+          | {/block:PreviousPage}
+          | {block:NextPage}
           a.next(href='{NextPage}', data-current-page='{CurrentPage}', data-total-pages='{TotalPages}')
             | {lang:Next}
             span.bg
-          |                         {/block:NextPage}
+          | {/block:NextPage}
           .loader
             .loader-bar
             .loader-bar
             .loader-bar
-        |                     {/block:Pagination}
-        |                 {/block:IndexPage}
+        | {/block:Pagination}
+        | {/block:IndexPage}
+
+
+
+
+
+
+
+
+
     script.
       var Optica = {};
       Optica.ENDLESS_SCROLLING = {block:IfEndlessScrolling}true{/block:IfEndlessScrolling}{block:IfNotEndlessScrolling}false{/block:IfNotEndlessScrolling};
@@ -688,6 +709,10 @@ html
       text: "{lang:Open In App CTA E}"
       }
       ];
+
+
+    
+
     script(src='//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js')
     script.
       !window.jQuery && document.write(unescape('%3Cscript src="http://static.tumblr.com/vr9xgox/sBgmmjhyw/jquery-1.9.1.min.js"%3E%3C/script%3E'));
