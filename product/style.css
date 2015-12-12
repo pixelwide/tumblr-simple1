@@ -4,3 +4,7 @@
 
 .header-image-wrapper {
   height: 50px; }
+
+.post-content {
+  padding: 20px;
+  background-color: #525252; }
