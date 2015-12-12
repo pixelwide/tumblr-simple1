@@ -15,12 +15,21 @@
 }
 
 .header-image{
-background: 50% 50% no-repeat;
+    background: 49% 50% no-repeat;
     display: block;
-    height: 100%;
+    height: 300px;
     opacity: 1;
-    position: relative;
+    overflow: hidden;
+    position: absolute;
     -webkit-transition: opacity .15s ease;
     transition: opacity .15s ease;
+}
 
+.header-image img {
+    width: 100%;
+}
+
+body {
+    background: #ededed;
+    margin: 0px;
 }

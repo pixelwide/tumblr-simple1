@@ -114,7 +114,15 @@
       <div class="header-image"><img src="{HeaderImage}"></div>
     </div>{/block:ShowHeaderImage}
     <div class="contents-wrap">
-      <div class="content"></div>
+      <div class="content">
+        <div class="article-content">{block:Text}
+          <div class="post-content">{block:Title}
+            <h2 class="title"><a href="{Permalink}">{Title}</a></h2>{/block:Title}
+            {block:Body}
+            <div class="body-text">{Body}</div>{/block:Body}
+          </div>{/block:Text}
+        </div>
+      </div>
       <div class="sidebar"></div>
     </div>
     <script>

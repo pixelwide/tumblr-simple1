@@ -132,10 +132,24 @@ html
 
 
 
-
     .contents-wrap
 
       .content
+
+
+        .article-content
+                | {block:Text}
+                .post-content
+                  | {block:Title}
+                  h2.title
+                    a(href='{Permalink}') {Title}
+                  | {/block:Title}
+                  | {block:Body}
+                  .body-text
+                    | {Body}
+                  | {/block:Body}
+                | {/block:Text}
+
 
       .sidebar
 
