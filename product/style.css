@@ -8,3 +8,12 @@
 .post-content {
   padding: 20px;
   background-color: #525252; }
+
+.header-image {
+  background: 50% 50% no-repeat;
+  display: block;
+  height: 100%;
+  opacity: 1;
+  position: relative;
+  -webkit-transition: opacity .15s ease;
+  transition: opacity .15s ease; }
