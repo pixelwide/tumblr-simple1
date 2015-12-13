@@ -47,6 +47,50 @@ html.no-js(lang='en')
 
       .page.col-xs-12.col-sm-8
 
+
+
+ 
+
+          | {block:Posts}
+          article.scrollable(id='{PostID}', class='type_{PostType} {TagsAsClasses}', rel='{ReblogURL}')
+            .article-content
+
+              | {block:Text}
+              // Text Post
+              .text-post-wrap
+                | {block:Title}
+                | {block:IndexPage}
+                h2
+                  a(href='{Permalink}', title='{Title}') {Title}
+                | {/block:IndexPage}
+                | {block:PermalinkPage}
+                h2 {Title}
+                | {/block:PermalinkPage}
+                | {/block:Title}
+                | {Body}
+              | {/block:Text}
+
+              | {block:Photo}
+              // Photo Post
+              .photo-stage.Link(class='{block:IndexPage} {select:Photo Link}{/block:IndexPage}{block:PermalinkPage}natural {select:Photo Permalink}{/block:PermalinkPage}')
+                .photo-wrap.photo--post
+                  a(href='{Permalink}', title='{Title}')
+                    img(src='{PhotoURL-500}', alt='{PhotoAlt}')
+
+              | {block:Caption}
+              .caption
+                | {Caption}
+              | {/block:Caption}
+              | {/block:Photo}
+
+
+
+
+          | {/block:Posts}
+
+
+
+
       .sidebar.col-xs-12.col-sm-4
 
 

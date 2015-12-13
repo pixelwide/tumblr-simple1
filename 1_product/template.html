@@ -25,7 +25,29 @@
     </header>{/block:ShowHeaderImage}
   </div>
   <div class="container row col-xs-12 col-sm-8">
-    <div class="page col-xs-12 col-sm-8"></div>
+    <div class="page col-xs-12 col-sm-8">{block:Posts}
+      <article id="{PostID}" rel="{ReblogURL}" class="scrollable type_{PostType} {TagsAsClasses}">
+        <div class="article-content">{block:Text}
+          <!-- Text Post-->
+          <div class="text-post-wrap">
+            {block:Title}
+            {block:IndexPage}
+            <h2><a href="{Permalink}" title="{Title}">{Title}</a></h2>{/block:IndexPage}
+            {block:PermalinkPage}
+            <h2>{Title}</h2>{/block:PermalinkPage}
+            {/block:Title}
+            {Body}
+          </div>{/block:Text}
+          {block:Photo}
+          <!-- Photo Post-->
+          <div class="photo-stage Link {block:IndexPage} {select:Photo Link}{/block:IndexPage}{block:PermalinkPage}natural {select:Photo Permalink}{/block:PermalinkPage}">
+            <div class="photo-wrap photo--post"><a href="{Permalink}" title="{Title}"><img src="{PhotoURL-500}" alt="{PhotoAlt}"></a></div>
+          </div>{block:Caption}
+          <div class="caption">{Caption}</div>{/block:Caption}
+          {/block:Photo}
+        </div>
+      </article>{/block:Posts}
+    </div>
     <div class="sidebar col-xs-12 col-sm-4">{block:IfLogoImage}<a href="/" title="{Title}" class="blog-logo-img"><img src="{image:Logo}" alt="{Title}"></a>{/block:IfLogoImage}<a href="/" title="{Title}" class="blog-title-box">{block:ShowAvatar}<a class="avatar-image {AvatarShape}"><img src="{PortraitURL-128}" alt="{Title}"></a>{/block:ShowAvatar}
         {block:ShowTitle}<a class="blog-title">
           <h1>{Title}</h1></a>{/block:ShowTitle}</a></div>
