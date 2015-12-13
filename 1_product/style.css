@@ -870,6 +870,13 @@
     -webkit-order: 1;
     -ms-flex-order: 1;
     order: 1; } }
+.header-image img {
+  width: 100%; }
+
+.header-image-wrap {
+  max-height: 200px;
+  overflow: hidden; }
+
 body {
   margin: 0px !important;
   background-color: #efefef; }
