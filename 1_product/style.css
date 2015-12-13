@@ -871,4 +871,5 @@
     -ms-flex-order: 1;
     order: 1; } }
 body {
-  margin: 0px !important; }
+  margin: 0px !important;
+  background-color: #efefef; }
