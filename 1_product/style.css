@@ -874,9 +874,8 @@
   width: 100%; }
 
 .header-image-wrap {
-  max-height: 200px;
+  max-height: 100px;
   overflow: hidden; }
 
 body {
-  margin: 0px !important;
-  background-color: #efefef; }
+  margin: 0px !important; }
