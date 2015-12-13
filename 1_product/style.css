@@ -877,5 +877,8 @@
   max-height: 100px;
   overflow: hidden; }
 
+.photo-wrap img {
+  width: 100%; }
+
 body {
   margin: 0px !important; }
