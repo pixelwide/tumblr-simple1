@@ -1,0 +1,1065 @@
+doctype html
+html.no-js(lang='en')
+  head
+    //
+      - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+      Hipster Premium Tumblr Theme by PRECRAFTED
+      Visit http://precrafted.com for information, support, and more themes!
+      Version 2.2
+      - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+    // Basic Page Settings
+    meta(charset='utf-8')
+    meta(http-equiv='X-UA-Compatible', content='IE=edge,chrome=1')
+    title {Title}{block:PostSummary} - {PostSummary}{/block:PostSummary}
+    meta(name='author', content='{Title}')
+    meta(name='tumblr-theme', content='39445')
+    | {block:Description}
+    meta(name='description', content='{MetaDescription}')
+    | {/block:Description}
+    link(rel='shortcut icon', href='{Favicon}')
+    link(rel='apple-touch-icon', href='{PortraitURL-128}')
+    link(rel='alternate', type='application/rss+xml', href='{RSS}')
+    // Main Style Settings
+    meta(name='viewport', content='width=device-width, initial-scale=1, minimal-ui')
+    | {block:IfFontEmbedCode}
+    | {text:Font Embed Code}
+    | {/block:IfFontEmbedCode}
+    | {block:IfNotFontEmbedCode}
+    link(href='http://fonts.googleapis.com/css?family=Montserrat:400,700', rel='stylesheet', type='text/css')
+    | {/block:IfNotFontEmbedCode}
+    link(rel='stylesheet', href='http://static.tumblr.com/e6lc7yi/z3pnekdqv/precrafted-social.css')
+    link(rel='stylesheet', href='http://static.tumblr.com/e6lc7yi/lnfnsuuyc/hipster-styles.css')
+    // Custom Options
+    // Custom Colors
+    meta(name='color:Description Text', content='#30363c')
+    meta(name='color:Menu Text', content='#30363c')
+    meta(name='color:Social Background', content='{AccentColor}')
+    meta(name='color:Social Icon', content='#ffffff')
+    meta(name='color:Post Background', content='#ffffff')
+    meta(name='color:Borders', content='#ecf0f1')
+    meta(name='color:Post Titles', content='{TitleColor}')
+    meta(name='color:Text', content='#64707A')
+    meta(name='color:Link', content='{AccentColor}')
+    meta(name='color:Link Hover', content='#30363c')
+    // Custom Images
+    meta(name='image:Logo', content='')
+    meta(name='image:Header 2', content='')
+    meta(name='image:Header 3', content='')
+    meta(name='image:Header 4', content='')
+    meta(name='image:Header 5', content='')
+    // Custom Text
+    meta(name='text:Title Font Size', content='40')
+    meta(name='text:Title Letter Spacing', content='1')
+    meta(name='text:Photoset Spacing', content='5')
+    meta(name='text:Load More', content='Load More Posts')
+    meta(name='text:Load More Loading', content='Loading...')
+    meta(name='text:Load More End', content='No More Posts')
+    meta(name='text:Footer Text', content='Your custom footer message')
+    meta(name='text:Instagram Token', content='')
+    meta(name='text:Instagram Order', content='1')
+    meta(name='text:Instagram Follow Me', content='Follow Me')
+    meta(name='text:Google Analytics Code', content='')
+    meta(name='text:Disqus Shortname', content='')
+    meta(name='text:Sticky Tag', content='featured')
+    meta(name='text:Font Embed Code', content='')
+    meta(name='text:Font Family Logo', content='')
+    meta(name='text:Font Family Titles', content='')
+    meta(name='text:Font Family Body', content='')
+    meta(name='text:URL Twitter', content='')
+    meta(name='text:URL Facebook', content='')
+    meta(name='text:URL Tumblr', content='')
+    meta(name='text:URL Website', content='')
+    meta(name='text:URL Google', content='')
+    meta(name='text:URL Linkedin', content='')
+    meta(name='text:URL Foursquare', content='')
+    meta(name='text:URL Skype', content='')
+    meta(name='text:URL Email', content='')
+    meta(name='text:URL Instagram', content='')
+    meta(name='text:URL Flickr', content='')
+    meta(name='text:URL 500px', content='')
+    meta(name='text:URL VSCO Grid', content='')
+    meta(name='text:URL Camera', content='')
+    meta(name='text:URL Eye', content='')
+    meta(name='text:URL Pinterest', content='')
+    meta(name='text:URL Heart', content='')
+    meta(name='text:URL Youtube', content='')
+    meta(name='text:URL Vimeo', content='')
+    meta(name='text:URL Vine', content='')
+    meta(name='text:URL Ebay', content='')
+    meta(name='text:URL Store', content='')
+    meta(name='text:URL Apple', content='')
+    meta(name='text:URL Googleplay', content='')
+    meta(name='text:URL Etsy', content='')
+    meta(name='text:URL Dribbble', content='')
+    meta(name='text:URL Behance', content='')
+    meta(name='text:URL deviantART', content='')
+    meta(name='text:URL Github', content='')
+    meta(name='text:URL Medium', content='')
+    meta(name='text:URL Quora', content='')
+    meta(name='text:URL Weibo', content='')
+    meta(name='text:URL Travel', content='')
+    meta(name='text:URL Lastfm', content='')
+    meta(name='text:URL Rdio', content='')
+    meta(name='text:URL Spotify', content='')
+    meta(name='text:URL Soundcloud', content='')
+    meta(name='text:URL RSS', content='')
+    // Custom Choices
+    meta(name='select:Pagination', content='pagination_load-more', title='Load More')
+    meta(name='select:Pagination', content='pagination_standard', title='Standard')
+    meta(name='select:Pagination', content='pagination_infinite-scroll', title='Infinite Scroll')
+    meta(name='select:Photo Link', content='post', title='Post')
+    meta(name='select:Photo Link', content='image', title='Image')
+    meta(name='select:Photo Link', content='lightbox', title='Lightbox')
+    meta(name='select:Photo Link', content='none', title='None')
+    meta(name='select:Photo Link Permalink', content='image', title='Image')
+    meta(name='select:Photo Link Permalink', content='lightbox', title='Lightbox')
+    meta(name='select:Photo Link Permalink', content='none', title='None')
+    meta(name='select:Panorama Link', content='image', title='Lightbox')
+    meta(name='select:Panorama Link', content='post', title='Post')
+    meta(name='select:Panorama Link', content='none', title='None')
+    meta(name='select:Panorama Link Permalink', content='image', title='Lightbox')
+    meta(name='select:Panorama Link Permalink', content='none', title='None')
+    meta(name='select:Photoset Link', content='lightbox', title='Lightbox')
+    meta(name='select:Photoset Link', content='post', title='Post')
+    meta(name='select:Photoset Link', content='none', title='None')
+    meta(name='select:Photoset Link Permalink', content='lightbox', title='Lightbox')
+    meta(name='select:Photoset Link Permalink', content='none', title='None')
+    meta(name='if:Photoset Cover', content='0')
+    meta(name='if:Sticky Posts', content='0')
+    meta(name='if:Show Archive Link', content='1')
+    meta(name='if:Show Search', content='1')
+    meta(name='if:White Icons', content='0')
+    meta(name='if:Show Group Author', content='0')
+    meta(name='if:Sharer', content='1')
+    meta(name='if:Sharer Twitter', content='1')
+    meta(name='if:Sharer Facebook', content='1')
+    meta(name='if:Sharer Google', content='1')
+    meta(name='if:Sharer Pinterest', content='1')
+    meta(name='if:Show Timestamp', content='1')
+    meta(name='if:Show Meta On Home', content='0')
+    // Custom CSS
+    style(type='text/css').
+      body {
+      background: {BackgroundColor};
+      color: {color:Text};
+      }
+      h1, h2, h3, h4, h5,
+      h1 a, h2 a, h3 a, h4 a, h5 a {
+      color: {color:Post Titles};
+      }
+      h1 a:hover, h2 a:hover, h3 a:hover, h4 a:hover, h5 a:hover {
+      color: {color:Link};
+      }
+      a {
+      color: {color:Link};
+      }
+      a:hover {
+      color: {color:Link Hover};
+      }
+      .header-image-wrap {
+      background-color: {TitleColor};
+      }
+      .sidebar-wrap .blog-title h1 {
+      font-family: {TitleFont};
+      font-weight: {TitleFontWeight};
+      color: {TitleColor};
+      {block:IfTitleFontSize}
+      font-size: {text:Title Font Size}px;
+      {/block:IfTitleFontSize}
+      {block:IfTitleLetterSpacing}
+      letter-spacing: {text:Title Letter Spacing}px;
+      {/block:IfTitleLetterSpacing}
+      }
+      .description {
+      color: {color:Description Text};
+      }
+      .social-menu li a {
+      background: {color:Social Background};
+      color: {color:Social Icon};
+      }
+      .scroll-top,
+      .post-nav {
+      background: {color:Social Background};
+      color: {color:Social Icon};
+      }
+      .scroll-top:hover,
+      .post-nav:hover {
+      color: {color:Social Icon};
+      }
+      .main-menu li a {
+      color: {color:Menu Text};
+      }
+      .main-menu li a:hover {
+      border-color: {color:Menu Text};
+      }
+      .menu .search input {
+      color: {color:Menu Text};
+      }
+      .menu .search ::-webkit-input-placeholder {
+      color: {color:Menu Text};
+      }
+      .menu .search :-moz-placeholder {
+      color: {color:Menu Text};
+      }
+      .menu .search ::-moz-placeholder {
+      color: {color:Menu Text};
+      }
+      .menu .search :-ms-input-placeholder {
+      color: {color:Menu Text};
+      }
+      .footer span,
+      .footer .credit a {
+      color: {color:Menu Text};
+      }
+      .type_pagination.pagination_load-more .article-content,
+      .type_pagination.pagination_infinite-scroll .article-content {
+      color: {color:Link};
+      }
+      .type_pagination.pagination_load-more .article-content:hover,
+      .type_pagination.pagination_load-more.loading .article-content {
+      background: {color:Link};
+      color: {color:Post Background};
+      }
+      .type_pagination.pagination a {
+      background: {color:Post Background};
+      }
+      .instagram-feed .instagram-image .overlay:before {
+      background: {color:Link};
+      }
+      .instagram-feed .instagram-image .overlay .social-instagram {
+      color: {color:Post Background};
+      }
+      .instagram-feed .instagram-link {
+      margin-top: {text:Photoset Spacing}px;
+      background: {color:Link};
+      color: {color:Post Background};
+      }
+      .instagram-feed .instagram-link:hover {
+      background: {color:Link Hover};
+      }
+      article .article-content {
+      background: {color:Post Background};
+      }
+      article.type_chat .line,
+      article blockquote {
+      border-color: {color:Borders};
+      }
+      article.type_audio .audio-post-wrap p,
+      article.type_answer .answer-person {
+      color: {color:Post Titles};
+      }
+      article.type_quote .quote {
+      color: {color:Post Titles};
+      }
+      article hr {
+      background: {color:Borders};
+      }
+      article.type_link .the-link {
+      background: {color:Link};
+      color: {color:Post Background};
+      }
+      article.type_link .the-link:hover {
+      background: {color:Link hover};
+      }
+      .icons li.sharer ul {
+      background: {color:Post Background};
+      border-color: {color:Borders};
+      }
+      .icons li.sharer ul:before {
+      border-top-color: {color:Borders};
+      }
+      .icons li.sharer ul:after {
+      border-top-color: {color:Post Background};
+      }
+      .post-footer a.timestamp {
+      color: {color:Text};
+      }
+      ::-moz-selection { background: {color:Link}; color: {color:Post Background}; text-shadow: none; }
+      ::selection { background: {color:Link}; color: {color:Post Background}; text-shadow: none; }
+      {block:IfFontEmbedCode}
+      {block:IfFontFamilyBody}
+      body {
+      font-family: '{text:Font Family Body}';
+      }
+      {/block:IfFontFamilyBody}
+      {block:IfFontFamilyLogo}
+      .sidebar-wrap .blog-title h1 {
+      font-family: '{text:Font Family Logo}';
+      }
+      {/block:IfFontFamilyLogo}
+      {block:IfFontFamilyTitles}
+      h1, h2, h3, h4, h5,
+      article.type_quote .quote,
+      article.type_answer .answer-person,
+      article.type_link .the-link {
+      font-family: '{text:Font Family Titles}';
+      }
+      {/block:IfFontFamilyTitles}
+      {/block:IfFontEmbedCode}
+      {block:IfStickyPosts}
+      .index article.{text:Sticky Tag} {
+      display: none;
+      }
+      .index article.{text:Sticky Tag}.sticky-show,
+      .index.tagged article.{text:Sticky Tag},
+      .index.search article.{text:Sticky Tag} {
+      display: block;
+      }
+      {/block:IfStickyPosts}
+    style(type='text/css').
+      {CustomCSS}
+    |   {block:IfGoogleAnalyticsCode}
+    script(type='text/javascript').
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', '{text:Google Analytics Code}']);
+      _gaq.push(['_trackPageview']);
+      (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+    |   {/block:IfGoogleAnalyticsCode}
+    // Sharing meta tags
+    meta(property='og:site_name', content='{Title}')
+    | {block:IndexPage}
+    meta(property='og:title', content='{block:TagPage}"{PlaintextTag}"-{/block:TagPage}{block:SearchPage}{lang:Search results for SearchQuery}-{/block:SearchPage}{Title}')
+    meta(property='og:url', content='{blogURL}{block:TagPage}tagged/{URLSafeTag}{/block:TagPage}')
+    meta(property='og:type', content='blog')
+    meta(property='og:description', content='{MetaDescription}{block:TagPage}{PlaintextDescription}{/block:TagPage}')
+    meta(property='og:image', content='{PortraitURL-128}')
+    | {/block:IndexPage}{block:PermalinkPage}
+    meta(property='og:url', content='{Permalink}')
+    meta(property='og:type', content='article')
+    | {block:Posts}{block:Text}{block:Title}
+    meta(property='og:title', content='{PlaintextTitle}')
+    | {/block:Title}
+    meta(property='og:description', content='{PlaintextBody}')
+    meta(property='og:image', content='{PortraitURL-128}')
+    | {/block:Text}{block:Photo}
+    meta(property='og:image', content='{PhotoURL-HighRes}')
+    | {block:Caption}
+    meta(property='og:description', content='{PlaintextCaption}')
+    | {/block:Caption}{/block:Photo}{block:Photoset}{block:Photos}
+    meta(property='og:image', content='{PhotoURL-HighRes}')
+    | {/block:Photos}{block:Caption}
+    meta(property='og:description', content='{PlaintextCaption}')
+    | {/block:Caption}{/block:Photoset}{block:Quote}
+    meta(property='og:title', content='{PlaintextQuote}')
+    meta(property='og:description', content='{PlaintextSource}')
+    meta(property='og:image', content='{PortraitURL-128}')
+    | {/block:Quote}{block:Link}
+    meta(property='og:title', content='{PlaintextName}')
+    meta(property='og:description', content='{PlaintextDescription}')
+    | {block:Thumbnail}
+    meta(property='og:image', content='{Thumbnail}')
+    | {/block:Thumbnail}{/block:Link}{block:Chat}
+    meta(property='og:title', content='{PlaintextTitle}')
+    meta(property='og:description', content='{block:Lines}{block:Label}{Label}:{/block:Label}{Line}•{/block:Lines}')
+    meta(property='og:image', content='{PortraitURL-128}')
+    | {/block:Chat}{block:Audio}
+    meta(property='og:title', content='{block:Artist}{Artist}-{/block:Artist}{block:TrackName}{TrackName}{/block:TrackName}')
+    meta(property='og:description', content='{PlaintextCaption}')
+    | {block:AlbumArt}
+    meta(property='og:image', content='{AlbumArtURL}')
+    | {/block:AlbumArt}{/block:Audio}{block:Video}{block:Caption}
+    meta(property='og:description', content='{PlaintextCaption}')
+    | {/block:Caption}{block:VideoThumbnail}
+    meta(property='og:image', content='{VideoThumbnailURL}')
+    | {/block:VideoThumbnail}{/block:Video}{block:Answer}
+    meta(property='og:title', content='{PlaintextQuestion}')
+    meta(property='og:description', content='{PlaintextAnswer}')
+    meta(property='og:image', content='{PortraitURL-128}')
+    | {/block:Answer}{/block:Posts}{/block:PermalinkPage}
+    | {block:PermalinkPage}
+    meta(name='twitter:url', content='{Permalink}')
+    | {block:Posts}{block:Text}
+    meta(name='twitter:card', content='summary')
+    | {block:Title}
+    meta(name='twitter:title', content='{PlaintextTitle}')
+    | {/block:Title}
+    meta(name='twitter:description', content='{PlaintextBody}')
+    meta(name='twitter:image', content='{PortraitURL-128}')
+    | {/block:Text}{block:Photo}
+    meta(name='twitter:card', content='photo')
+    meta(name='twitter:image', content='{PhotoURL-500}')
+    | {block:Caption}
+    meta(name='twitter:description', content='{PlaintextCaption}')
+    | {/block:Caption}{/block:Photo}{block:Photoset}
+    meta(name='twitter:card', content='photo')
+    | {block:Photos}
+    meta(name='twitter:image', content='{PhotoURL-500}')
+    | {/block:Photos}{block:Caption}
+    meta(name='twitter:description', content='{PlaintextCaption}')
+    | {/block:Caption}{/block:Photoset}{block:Quote}
+    meta(name='twitter:card', content='summary')
+    meta(name='twitter:title', content='{PlaintextQuote}')
+    meta(name='twitter:description', content='{PlaintextSource}')
+    meta(name='twitter:image', content='{PortraitURL-128}')
+    | {/block:Quote}{block:Link}
+    meta(name='twitter:card', content='summary')
+    meta(name='twitter:title', content='{PlaintextName}')
+    meta(name='twitter:description', content='{PlaintextDescription}')
+    | {block:Thumbnail}
+    meta(name='twitter:image', content='{Thumbnail}')
+    | {/block:Thumbnail}{/block:Link}{block:Chat}
+    meta(name='twitter:card', content='summary')
+    meta(name='twitter:title', content='{PlaintextTitle}')
+    meta(name='twitter:description', content='{block:Lines}{block:Label}{Label}:{/block:Label}{Line}•{/block:Lines}')
+    meta(name='twitter:image', content='{PortraitURL-128}')
+    | {/block:Chat}{block:Audio}
+    meta(name='twitter:card', content='summary')
+    meta(name='twitter:title', content='{block:Artist}{Artist}-{/block:Artist}{block:TrackName}{TrackName}{/block:TrackName}')
+    meta(name='twitter:description', content='{PlaintextCaption}')
+    | {block:AlbumArt}
+    meta(name='twitter:image', content='{AlbumArtURL}')
+    | {/block:AlbumArt}{/block:Audio}{block:Video}
+    meta(name='twitter:card', content='summary')
+    meta(name='twitter:title', content='{PlaintextTitle}')
+    | {block:Caption}
+    meta(name='twitter:description', content='{PlaintextCaption}')
+    | {/block:Caption}{block:VideoThumbnail}
+    meta(name='twitter:image', content='{VideoThumbnailURL}')
+    | {/block:VideoThumbnail}{/block:Video}{block:Answer}
+    meta(name='twitter:card', content='summary')
+    meta(name='twitter:title', content='{PlaintextQuestion}')
+    meta(name='twitter:description', content='{PlaintextAnswer}')
+    meta(name='twitter:image', content='{PortraitURL-128}')
+    | {/block:Answer}{/block:Posts}{/block:PermalinkPage}
+
+    | {block:indexpage}
+  body(class='index{block:IfStickyPosts} sticky-posts{/block:IfStickyPosts}{block:SearchPage} search{block:NoSearchResults} no-results{/block:NoSearchResults}{/block:SearchPage}{block:TagPage} tagged{/block:TagPage}')
+    | {block:indexpage}
+
+    | {block:permalinkpage}
+  body(class="permalink")
+    | {/block:PermalinkPage}
+
+
+
+
+
+    // Tumblr Theme #39445
+
+
+    | {block:ShowHeaderImage}
+    header.header-image-wrap
+      .header-image
+        img(src='')
+    | {/block:ShowHeaderImage}
+    .page-wrap
+      .scroll-top-wrap
+        a.scroll-top.off(href='#top')
+          i.social-up
+      | {block:PermalinkPagination}
+      | {block:NextPost}
+      a.post-nav.next(href='{NextPost}', title='{lang:Next post}')
+        i.social-left
+      | {/block:NextPost}
+      | {block:PreviousPost}
+      a.post-nav.prev(href='{PreviousPost}', title='{lang:Previous post}')
+        i.social-right
+      | {/block:PreviousPost}
+      | {/block:PermalinkPagination}
+      aside.sidebar-wrap.fixed
+        .sidebar
+          | {block:IfLogoImage}
+          a.logo-image(href='/', title='{Title}')
+            img(src='{image:Logo}', alt='{Title}')
+          | {/block:IfLogoImage}
+          | {block:IfNotLogoImage}
+          a.title(href='/', title='{Title}')
+            | {block:ShowAvatar}
+            span.avatar-image(class='{AvatarShape}')
+              img(src='{PortraitURL-128}', alt='{Title}')
+            | {/block:ShowAvatar}
+            | {block:ShowTitle}
+            span.blog-title
+              h1 {Title}
+            | {/block:ShowTitle}
+          | {/block:IfNotLogoImage}
+          | {block:ShowDescription}
+          .description
+            | {Description}
+            | {/block:ShowDescription}
+            nav.menu
+              ul.social-menu(class='{AvatarShape}')
+                | {block:IfURLTwitter}
+                li
+                  a(href='{text:URL Twitter}', target='_blank', title='Twitter')
+                    i.social-tweets
+                | {/block:IfURLTwitter}
+                | {block:IfURLFacebook}
+                li
+                  a(href='{text:URL Facebook}', target='_blank', title='Facebook')
+                    i.social-facebook
+                | {/block:IfURLFacebook}
+                | {block:IfURLTumblr}
+                li
+                  a(href='{text:URL Tumblr}', target='_blank', title='Tumblr')
+                    i.social-tumblr
+                | {/block:IfURLTumblr}
+                | {block:IfURLWebsite}
+                li
+                  a(href='{text:URL Website}', target='_blank', title='Website')
+                    i.social-monitor
+                | {/block:IfURLWebsite}
+                | {block:IfURLGoogle}
+                li
+                  a(href='{text:URL Google}', target='_blank', title='Google')
+                    i.social-gplus
+                | {/block:IfURLGoogle}
+                | {block:IfURLLinkedin}
+                li
+                  a(href='{text:URL Linkedin}', target='_blank', title='Linkedin')
+                    i.social-linkedin
+                | {/block:IfURLLinkedin}
+                | {block:IfURLFoursquare}
+                li
+                  a(href='{text:URL Foursquare}', target='_blank', title='Foursquare')
+                    i.social-foursquare
+                | {/block:IfURLFoursquare}
+                | {block:IfURLSkype}
+                li
+                  a(href='{text:URL Skype}', target='_blank', title='Skype')
+                    i.social-skype
+                | {/block:IfURLSkype}
+                | {block:IfURLEmail}
+                li
+                  a(href='mailto:{text:URL Email}', target='_blank', title='Email')
+                    i.social-mail
+                | {/block:IfURLEmail}
+                | {block:IfURLInstagram}
+                li
+                  a(href='{text:URL Instagram}', target='_blank', title='Instagram')
+                    i.social-instagram
+                | {/block:IfURLInstagram}
+                | {block:IfURLFlickr}
+                li
+                  a(href='{text:URL Flickr}', target='_blank', title='Flickr')
+                    i.social-flickr
+                | {/block:IfURLFlickr}
+                | {block:IfURL500px}
+                li
+                  a(href='{text:URL 500px}', target='_blank', title='500px')
+                    i.social-fivehundredpx
+                | {/block:IfURL500px}
+                | {block:IfURLVSCOGrid}
+                li
+                  a(href='{text:URL VSCO Grid}', target='_blank', title='VSCO Grid')
+                    i.social-vsco-grid
+                | {/block:IfURLVSCOGrid}
+                | {block:IfURLCamera}
+                li
+                  a(href='{text:URL Camera}', target='_blank', title='')
+                    i.social-camera
+                | {/block:IfURLCamera}
+                | {block:IfURLEye}
+                li
+                  a(href='{text:URL Eye}', target='_blank', title='')
+                    i.social-eye
+                | {/block:IfURLEye}
+                | {block:IfURLPinterest}
+                li
+                  a(href='{text:URL Pinterest}', target='_blank', title='Pinterest')
+                    i.social-pinterest
+                | {/block:IfURLPinterest}
+                | {block:IfURLHeart}
+                li
+                  a(href='{text:URL Heart}', target='_blank', title='')
+                    i.social-heart
+                | {/block:IfURLHeart}
+                | {block:IfURLYoutube}
+                li
+                  a(href='{text:URL Youtube}', target='_blank', title='Youtube')
+                    i.social-youtube
+                | {/block:IfURLYoutube}
+                | {block:IfURLVimeo}
+                li
+                  a(href='{text:URL Vimeo}', target='_blank', title='Vimeo')
+                    i.social-vimeo
+                | {/block:IfURLVimeo}
+                | {block:IfURLVine}
+                li
+                  a(href='{text:URL Vine}', target='_blank', title='Vine')
+                    i.social-vine
+                | {/block:IfURLVine}
+                | {block:IfURLEbay}
+                li
+                  a(href='{text:URL Ebay}', target='_blank', title='Ebay')
+                    i.social-ebay
+                | {/block:IfURLEbay}
+                | {block:IfURLStore}
+                li
+                  a(href='{text:URL Store}', target='_blank', title='Store')
+                    i.social-basket
+                | {/block:IfURLStore}
+                | {block:IfURLApple}
+                li
+                  a(href='{text:URL Apple}', target='_blank', title='Apple')
+                    i.social-apple
+                | {/block:IfURLApple}
+                | {block:IfURLGoogleplay}
+                li
+                  a(href='{text:URL Googleplay}', target='_blank', title='Google Play')
+                    i.social-googleplay
+                | {/block:IfURLGoogleplay}
+                | {block:IfURLEtsy}
+                li
+                  a(href='{text:URL Etsy}', target='_blank', title='Etsy')
+                    i.social-etsy
+                | {/block:IfURLEtsy}
+                | {block:IfURLDribbble}
+                li
+                  a(href='{text:URL Dribbble}', target='_blank', title='Dribbble')
+                    i.social-dribbble
+                | {/block:IfURLDribbble}
+                | {block:IfURLBehance}
+                li
+                  a(href='{text:URL Behance}', target='_blank', title='Behance')
+                    i.social-behance
+                | {/block:IfURLBehance}
+                | {block:IfURLdeviantART}
+                li
+                  a(href='{text:URL deviantART}', target='_blank', title='deviantART')
+                    i.social-deviantart
+                | {/block:IfURLdeviantART}
+                | {block:IfURLGithub}
+                li
+                  a(href='{text:URL Github}', target='_blank', title='Github')
+                    i.social-github
+                | {/block:IfURLGithub}
+                | {block:IfURLMedium}
+                li
+                  a(href='{text:URL Medium}', target='_blank', title='Medium')
+                    i.social-medium
+                | {/block:IfURLMedium}
+                | {block:IfURLQuora}
+                li
+                  a(href='{text:URL Quora}', target='_blank', title='Quora')
+                    i.social-quora
+                | {/block:IfURLQuora}
+                | {block:IfURLWeibo}
+                li
+                  a(href='{text:URL Weibo}', target='_blank', title='Weibo')
+                    i.social-weibo
+                | {/block:IfURLWeibo}
+                | {block:IfURLTravel}
+                li
+                  a(href='{text:URL Travel}', target='_blank', title='')
+                    i.social-suitcase
+                | {/block:IfURLTravel}
+                | {block:IfURLLastfm}
+                li
+                  a(href='{text:URL Lastfm}', target='_blank', title='Lastfm')
+                    i.social-lastfm
+                | {/block:IfURLLastfm}
+                | {block:IfURLRdio}
+                li
+                  a(href='{text:URL Rdio}', target='_blank', title='Rdio')
+                    i.social-rdio
+                | {/block:IfURLRdio}
+                | {block:IfURLSpotify}
+                li
+                  a(href='{text:URL Spotify}', target='_blank', title='Spotify')
+                    i.social-spotify
+                | {/block:IfURLSpotify}
+                | {block:IfURLSoundcloud}
+                li
+                  a(href='{text:URL Soundcloud}', target='_blank', title='Soundcloud')
+                    i.social-soundcloud
+                | {/block:IfURLSoundcloud}
+                | {block:IfURLRSS}
+                li
+                  a(href='{text:URL RSS}', target='_blank', title='RSS')
+                    i.social-rss
+                | {/block:IfURLRSS}
+              ul.main-menu
+                | {block:HasPages}
+                | {block:Pages}
+                li
+                  a(href='{URL}', title='{Label}') {Label}
+                | {/block:Pages}
+                | {/block:HasPages}
+                | {block:AskEnabled}
+                li
+                  a(href='/ask', title='{AskLabel}') {AskLabel}
+                | {/block:AskEnabled}
+                | {block:SubmissionsEnabled}
+                li
+                  a(href='/submit', title='{SubmitLabel}') {SubmitLabel}
+                | {/block:SubmissionsEnabled}
+                | {block:IfShowArchiveLink}
+                li
+                  a(href='/archive', title='{lang:Archive}') {lang:Archive}
+                | {/block:IfShowArchiveLink}
+              | {block:IfShowSearch}
+              form.search(action='/search', method='get')
+                i.social-search
+                input(type='text', name='q', value='{SearchQuery}', placeholder='{lang:Search}...')
+              | {block:IfShowSearch}
+      section.the-posts
+        | {block:IndexPage}
+        | {block:SearchPage}
+        article#search-intro.scrollable.type_description.search-intro
+          .article-content
+            h2 {lang:Search results for SearchQuery}
+            | {block:NoSearchResults}
+            p {lang:No results for SearchQuery}
+            | {/block:NoSearchResults}
+        | {/block:SearchPage}
+        | {block:TagPage}
+        article#tag-intro.scrollable.type_description.tag-intro
+          .article-content
+            h2 {lang:Posts tagged Tag 2}
+        | {/block:TagPage}
+        | {block:IfInstagramToken}
+        article#instagram-post.scrollable.instagram-feed
+          .instagram-token {text:Instagram Token}
+          .instagram-order {text:Instagram Order}
+          .article-content
+            #instagram-feed
+            a.instagram-link(href='{text:URL Instagram}') {text:Instagram Follow Me}
+        | {/block:IfInstagramToken}
+        | {/block:IndexPage}
+        div(class='posts-holder{block:IndexPage} posts-grid{/block:IndexPage}', {block:ifstickyposts}='', data-sticky='{text:Sticky Tag}', {='', block:ifstickyposts}='')
+          | {block:IfStickyPosts}
+          .sticky-loader
+          | {/block:IfStickyPosts}
+          |       {block:Posts inlineMediaWidth="500" inlineNestedMediaWidth="500"}
+          article.scrollable(id='{PostID}', class='type_{PostType} {TagsAsClasses}', rel='{ReblogURL}')
+            .article-content
+              | {block:Text}
+              // Text Post
+              .text-post-wrap
+                | {block:Title}
+                | {block:IndexPage}
+                h2
+                  a(href='{Permalink}', title='{Title}') {Title}
+                | {/block:IndexPage}
+                | {block:PermalinkPage}
+                h2 {Title}
+                | {/block:PermalinkPage}
+                | {/block:Title}
+                | {Body}
+              | {/block:Text}
+              | {block:Photo}
+              // Photo Post
+              .photo-stage.Link(class='{block:IndexPage} {select:Photo Link}{/block:IndexPage}{block:PermalinkPage}natural {select:Photo Permalink}{/block:PermalinkPage}')
+                .photo-wrap.photo--post
+                  a(href='{Permalink}', title='{Title}')
+                    img(src='{PhotoURL-500}', alt='{PhotoAlt}')
+                .photo-wrap.photo--image
+                  | {LinkOpenTag}
+                  img(src='{PhotoURL-500}', alt='{PhotoAlt}')
+                  | {LinkCloseTag}
+                .photo-wrap.photo--lightbox
+                  a(href='{PhotoURL-HighRes}')
+                    img(src='{PhotoURL-500}')
+                .photo-wrap.photo--none
+                  img(src='{PhotoURL-500}', alt='{PhotoAlt}')
+              | {block:Caption}
+              .caption
+                | {Caption}
+              | {/block:Caption}
+              | {/block:Photo}
+              | {block:Panorama}
+              // Panorama Post
+              .photo-stage.Link(class='{block:IndexPage}{select:Panorama Link}{/block:IndexPage}{block:PermalinkPage}{select:Panorama Permalink}{/block:PermalinkPage}')
+                .photo-wrap.photo--image
+                  | {LinkOpenTag}
+                  img(src='{PhotoURL-500}', alt='{PhotoAlt}')
+                  | {LinkCloseTag}
+                .photo-wrap.photo--post
+                  a(href='{Permalink}', title='{Title}')
+                    img(src='{PhotoURL-500}', alt='{PhotoAlt}')
+                .photo-wrap.photo--none
+                  img(src='{PhotoURL-500}', alt='{PhotoAlt}')
+              | {block:Caption}
+              .caption
+                | {Caption}
+              | {/block:Caption}
+              | {/block:Panorama}
+              | {block:Photoset}
+              // Photoset Post
+              | {block:IndexPage}
+              | {block:IfPhotosetCover}
+              a.photoset-wrap(href='{Permalink}', title='{Title}')
+                | {block:Photos}
+                img(src='{PhotoURL-500}', alt='{PhotoAlt}')
+                | {/block:Photos}
+              | {/block:IfPhotosetCover}
+              | {block:IfNotPhotosetCover}
+              //- .photoset-grid(class='{select:Photoset Link}', data-layout='{PhotosetLayout}', data-id='photoset{PostID}', data-post='{Permalink}' {block:ifphotosetspacing}, data-gutter='{text:Photoset Spacing}' {block:ifphotosetspacing})
+              //-   | {block:Photos}
+              //-   img(src='{PhotoURL-500}', {block:highres}data-highres='{PhotoURL-HighRes}', {='', block:highres}='', {block:caption}alt='{Caption}', block:caption}='', data-width='{PhotoWidth-HighRes}', data-height='{PhotoHeight-HighRes}')
+              //-   | {/block:Photos}
+              //- | {/block:IfNotPhotosetCover}
+              //- | {/block:IndexPage}
+              //- | {block:PermalinkPage}
+              //- .photoset-grid.Link(class='{select:Photoset Permalink}', data-layout='{PhotosetLayout}', data-id='photoset{PostID}', {block:ifphotosetspacing}data-gutter='{text:Photoset Spacing}', {block:ifphotosetspacing})
+              //-   | {block:Photos}
+              //-   img(src='{PhotoURL-500}', {block:highres}data-highres='{PhotoURL-HighRes}', {='', block:highres}='', {block:caption}alt='{Caption}', block:caption}='', data-width='{PhotoWidth-HighRes}', data-height='{PhotoHeight-HighRes}')
+              //-   | {/block:Photos}
+              //- | {/block:PermalinkPage}
+              //- | {block:Caption}
+              .caption
+                | {Caption}
+              | {/block:caption}
+              | {/block:Photoset}
+              | {block:Video}
+              // Video Post
+              .video-stage
+                .video-container(id='{postID}')
+                  | {VideoEmbed-500}
+              | {block:Caption}
+              .caption
+                | {Caption}
+              | {/block:Caption}
+              | {/block:Video}
+              | {block:Audio}
+              // Audio Post
+              | {block:AudioEmbed}
+              .audio-embed
+                | {AudioEmbed}
+              | {/block:AudioEmbed}
+              | {block:ExternalAudio}
+              a(href='{ExternalAudioURL}') {lang:Download}
+              | {/block:ExternalAudio}
+              | {block:Caption}
+              .caption
+                | {Caption}
+              | {/block:Caption}
+              | {/block:Audio}
+              | {block:Quote}
+              // Quote Post
+              .quote(class='{Length}')
+                | {Quote}
+              | {block:Source}
+              .quote-author {Source}
+              | {/block:Source}
+              | {/block:Quote}
+              | {block:Answer}
+              // Answer Post
+              .answer-post-wrap
+                .answer-wrap
+                  .answer-image(class='{AvatarShape}')
+                    img(src='{AskerPortraitURL-48}')
+                  .answer-person {Asker} asked:
+                  .answer-text.question {Question}
+                hr
+                | {block:Answerer}
+                .answer-wrap
+                  .answer-image(class='{AvatarShape}')
+                    img(src='{AnswererPortraitURL-48}', alt='{Title}')
+                  .answer-person {Answerer} answered:
+                  .answer-text {Answer}
+                hr
+                | {/block:Answerer}
+                .answer-wrap
+                  | {Replies}
+              | {/block:Answer}
+              | {block:Chat}
+              // Chat Post
+              .text-post-wrap
+                | {block:Title}
+                | {block:IndexPage}
+                h2
+                  a(href='{Permalink}', title='{Title}') {Title}
+                | {/block:IndexPage}
+                | {block:PermalinkPage}
+                h2 {Title}
+                | {/block:PermalinkPage}
+                | {/block:Title}
+                | {block:Lines}
+                .line(class='{Alt}')
+                  | {block:Label}
+                  strong {Label}
+                  | {/block:Label} {Line}
+                | {/block:Lines}
+              | {/block:Chat}
+              | {block:Link}
+              // Link Post
+              a.the-link(href='{URL}', {target}='')
+                | {block:Thumbnail}
+                img(src='{Thumbnail-HighRes}', alt='{Name}')
+                | {/block:Thumbnail}
+                .the-link-text
+                  | {block:Host}
+                  span {Host}
+                  | {/block:Host}
+                  | {Name} 
+                  i.social-right
+                  | {block:Excerpt}
+                  span {Excerpt}
+                  | {/block:Excerpt}
+              | {block:Description}
+              .caption
+                | {Description}
+              | {/block:Description}
+              | {/block:Link}
+              | {block:Date}
+              div(class='post-footer{block:PermalinkPage} permalink{/block:PermalinkPage}{block:IndexPage}{block:IfShowMetaOnHome} show-meta{/block:IfShowMetaOnHome}{/block:IndexPage}')
+                ul(class='icons{block:IfWhiteIcons} white{/block:IfWhiteIcons}')
+                  | {block:IfSharer}
+                  li.sharer
+                    a.social-export
+                    .sharer-wrap
+                      ul
+                        | {block:IfSharerTwitter}
+                        li.twitter
+                          a.social-tweets(href='https://twitter.com/intent/tweet?url={ShortURL}', title='Share on Twitter', target='_blank')
+                        |                   {/block:IfSharerTwitter}
+                        |                   {block:IfSharerFacebook}
+                        li.facebook
+                          a.social-facebook(href='http://www.facebook.com/sharer.php?u={Permalink}', title='Share on Facebook', target='_blank')
+                        |                   {/block:IfSharerFacebook}
+                        |                   {block:IfSharerGoogle}
+                        li.gplus
+                          a.social-gplus(href='https://plus.google.com/share?url={Permalink}', title='Share on Google +', target='_blank')
+                        |                   {/block:IfSharerGoogle}
+                        |                   {block:IfSharerPinterest}
+                        li.pinterest
+                          a.social-pinterest(href='https://pinterest.com/pin/create/button/?url={Permalink}{block:Text}&media={PortraitURL-128}{/block:Text}{block:Photo}&media={PhotoURL-HighRes}{/block:Photo}{block:Panorama}&media={PhotoURL-Panorama}{/block:Panorama}{block:Photoset}{block:Photos}&media={PhotoURL-500}{/block:Photos}{/block:Photoset}{block:Quote}&media={PortraitURL-128}{/block:Quote}{block:Link}&media={PortraitURL-128}{/block:Link}{block:Chat}&media={PortraitURL-128}{/block:Chat}{block:Audio}&media={PortraitURL-128}{/block:Audio}{block:Video}&media={PortraitURL-128}{block:VideoThumbnail}&media={VideoThumbnailURL}{/block:VideoThumbnail}{/block:Video}{block:Answer}&media={PortraitURL-128}{/block:Answer}{block:PostTitle}&description={PostTitle}{/block:PostTitle}', title='Share on Pinterest', target='_blank')
+                        |                   {/block:IfSharerPinterest}
+                  | {/block:IfSharer}
+                  li.reblog
+                    i.reblog-icon
+                      | {block:IfWhiteIcons}{ReblogButton color="white" size="16"}{/block:IfWhiteIcons}{block:IfNotWhiteIcons}{ReblogButton color="black" size="16"}{/block:IfNotWhiteIcons}
+                  li.like
+                    | {block:IfWhiteIcons}{LikeButton color="white" size="16"}{/block:IfWhiteIcons}{block:IfNotWhiteIcons}{LikeButton color="black" size="16"}{/block:IfNotWhiteIcons}
+                | {block:IfShowTimestamp}
+                | {block:IndexPage}
+                a.timestamp(href='{Permalink}') {TimeAgo}
+                | {/block:IndexPage}
+                | {block:PermalinkPage}
+                .timestamp {TimeAgo}
+                | {/block:PermalinkPage}
+                | {/block:IfShowTimestamp}
+                .post-meta
+                  | {block:IndexPage}
+                  | {block:IfDisqusShortname}
+                  a.dsq-comment-count(href='{Permalink}#disqus_thread') Comments
+                  script(type='text/javascript').
+                    var disqus_shortname = '{text:Disqus Shortname}';
+                    (function () {
+                    var s = document.createElement('script'); s.async = true;
+                    s.type = 'text/javascript';
+                    s.src = '//' + disqus_shortname + '.disqus.com/count.js';
+                    (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+                    }());
+                  | {/block:IfDisqusShortname}
+                  | {block:IfShowMetaOnHome}
+                  | {block:ContentSource}
+                  .source Source: {SourceLink}
+                  | {/block:ContentSource}
+                  | {block:RebloggedFrom}
+                  a.reblogged(href='{ReblogParentURL}', title='{ReblogParentTitle}') {lang:Reblogged from} {ReblogParentTitle}
+                  | {/block:RebloggedFrom}
+                  | {block:HasTags}
+                  .tagged
+                    | {lang:Tagged}: {block:Tags}
+                    a(href='{TagURL}') #{Tag}
+                    |  {/block:Tags}
+                  | {/block:HasTags}
+                  | {block:NoteCount}
+                  a(href='{Permalink}#notes') {NoteCountWithLabel}
+                  | {/block:NoteCount}
+                  | {/block:IfShowMetaOnHome}
+                  | {/block:IndexPage}
+                  | {block:PermalinkPage}
+                  | {block:ContentSource}
+                  .source Source: {SourceLink}
+                  | {/block:ContentSource}
+                  | {block:RebloggedFrom}
+                  a.reblogged(href='{ReblogParentURL}', title='{ReblogParentTitle}') {lang:Reblogged from} {ReblogParentTitle}
+                  | {/block:RebloggedFrom}
+                  | {block:HasTags}
+                  .tagged
+                    | {lang:Tagged}: {block:Tags}
+                    a(href='{TagURL}') #{Tag}
+                    |  {/block:Tags}
+                  | {/block:HasTags}
+                  | {/block:PermalinkPage}
+              | {block:PermalinkPage}
+              | {block:IfDisqusShortname}
+              #disqus_thread.disqus
+              script(type='text/javascript').
+                var disqus_shortname = '{text:Disqus Shortname}';
+                (function() {
+                var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+                dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+                (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+                })();
+              noscript
+                | Please enable JavaScript to view the 
+                a(href='http://disqus.com/?ref_noscript') comments powered by Disqus.
+              a.dsq-brlink(href='http://disqus.com')
+                | Comments powered by 
+                span.logo-disqus Disqus
+              | {/block:IfDisqusShortname}
+              | {block:PostNotes}
+              #notes.post-notes(class='{AvatarShape}')
+                .note-count {NoteCountWithLabel}
+                | {PostNotes-16}
+              | {/block:PostNotes}
+              | {/block:PermalinkPage}
+              | {/block:Date}
+          |       {/block:Posts}
+        | {block:IndexPage}
+        article.scrollable.type_pagination(class='{select:Pagination} {block:NextPage}next{/block:NextPage}')
+          .article-content
+            | {block:Pagination}
+            .pagination
+              | {block:PreviousPage}
+              a.prev(href='{PreviousPage}')
+                i.social-left
+                |  {lang:Previous page}
+              | {/block:PreviousPage}
+              | {block:NextPage}
+              a.next(href='{NextPage}')
+                | {lang:Next page} 
+                i.social-right
+              | {/block:NextPage}
+            | {/block:Pagination}
+            | {block:NextPage}
+            .load-more
+              | {block:IfLoadMoreLoading}
+              span.load-more-loading {text:Load More Loading}
+              | {block:IfLoadMoreLoading}
+              | {block:IfLoadMoreEnd}
+              span.load-more-end {text:Load More End}
+              | {block:IfLoadMoreEnd}
+              | {block:IfLoadMore}
+              span.load-more-text {text:Load More}
+              | {block:IfLoadMore}
+            | {/block:NextPage}
+        | {/block:IndexPage}
+        footer.footer
+          | {block:IfFooterText}
+          span {text:Footer Text}
+          | {/block:IfFooterText}
+          span © {Title} {CopyrightYears}
+          .credit
+            a(href='http://precrafted.com?ref=hipster-f', title='Precrafted Tumblr Themes', target='_blank') Hipster Tumblr Theme by Precrafted
+    // Javascript Assets
+    script(src='//ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js')
+    script(async='', defer='', src='//platform.instagram.com/en_US/embeds.js')
+    script(src='http://static.tumblr.com/e6lc7yi/iqsngmg7q/hipster-plugins.js')
+    script(type='text/javascript').
+      var images = [ '{HeaderImage}'
+      {block:IfHeader2Image}, '{image:Header 2}'{/block:IfHeader2Image}
+      {block:IfHeader3Image}, '{image:Header 3}'{/block:IfHeader3Image}
+      {block:IfHeader4Image}, '{image:Header 4}'{/block:IfHeader4Image}
+      {block:IfHeader5Image}, '{image:Header 5}'{/block:IfHeader5Image}
+      ];
+      var chosenImage = images[Math.floor(Math.random() * images.length)];
+      $('.header-image').css({
+      'background-image': 'url(' + chosenImage + ')'
+      });
+      $('.header-image > img').attr("src", chosenImage);
+    script(src='http://static.tumblr.com/e6lc7yi/ge3nxlqwj/hipster-app.js')
+  //
+    This Tumblr Theme and all of its CSS, Javascript,
+    and media assets are subject to Tumblr's Terms of Service:
+    http://www.tumblr.com/terms_of_service
+

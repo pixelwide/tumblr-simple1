@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+  <!-- ##############################################################-->
+  <!--     pixel wide basic theme-->
+  <!-- ##############################################################-->
+  
+</html>
+<head>{MobileAppHeaders}
+  <meta charset="utf-8">
+  <title>{Title}{block:PostSummary} - {PostSummary}{/block:PostSummary}</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimal-ui">
+  <link rel="stylesheet" href="https://rawgit.com/pixelwide/tumblr-simple1/master/product/style.css">
+  
+  <style>
+    /* Colors */
+    
+    
+    
+  </style>
+</head>
+<body class="row">
+  <div class="header row">{block:ShowHeaderImage}
+    <header class="header-image-wrap">
+      <div class="header-image"><img src="{HeaderImage}"></div>
+    </header>{/block:ShowHeaderImage}
+  </div>
+  <div class="container row col-xs-12 col-sm-8">
+    <div class="page col-xs-12 col-sm-8"></div>
+    <div class="sidebar col-xs-12 col-sm-4">{block:IfLogoImage}<a href="/" title="{Title}" class="blog-logo-img"><img src="{image:Logo}" alt="{Title}"></a>{/block:IfLogoImage}<a href="/" title="{Title}" class="blog-title-box">{block:ShowAvatar}<a class="avatar-image {AvatarShape}"><img src="{PortraitURL-128}" alt="{Title}"></a>{/block:ShowAvatar}
+        {block:ShowTitle}<a class="blog-title">
+          <h1>{Title}</h1></a>{/block:ShowTitle}</a></div>
+  </div>
+</body>

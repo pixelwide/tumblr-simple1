@@ -1,0 +1,79 @@
+doctype html
+html.no-js(lang='en')
+
+
+
+    // ##############################################################
+
+    //     pixel wide basic theme
+
+    // ##############################################################
+
+
+  head
+
+    | {MobileAppHeaders}
+    meta(charset='utf-8')
+    title {Title}{block:PostSummary} - {PostSummary}{/block:PostSummary}
+    meta(name='viewport', content='width=device-width, initial-scale=1, minimal-ui')
+
+
+
+    //- druing development
+    link(rel='stylesheet', href='https://rawgit.com/pixelwide/tumblr-simple1/master/product/style.css')
+    //- -------------------
+
+
+    style.
+      /* Colors */
+
+
+
+  body.row
+
+
+    .header.row
+
+
+      | {block:ShowHeaderImage}
+      header.header-image-wrap
+        .header-image
+          img(src='{HeaderImage}')
+      | {/block:ShowHeaderImage}
+
+
+
+    .container.row.col-xs-12.col-sm-8
+
+      .page.col-xs-12.col-sm-8
+
+      .sidebar.col-xs-12.col-sm-4
+
+
+        | {block:IfLogoImage}
+        a.blog-logo-img(href='/', title='{Title}')
+          img(src='{image:Logo}', alt='{Title}')
+        | {/block:IfLogoImage}
+        
+        a.blog-title-box(href='/', title='{Title}')
+
+          | {block:ShowAvatar}
+          a.avatar-image(class='{AvatarShape}')
+            img(src='{PortraitURL-128}', alt='{Title}')
+          | {/block:ShowAvatar}
+
+          | {block:ShowTitle}
+          a.blog-title
+            h1 {Title}
+          | {/block:ShowTitle}
+        
+        
+
+
+
+
+
+
+
+
+
